@@ -92,7 +92,7 @@ def main(session):
 
 
 if __name__ == '__main__':
-    engine = create_engine('sqlite:///sqlite.db', echo=False)
+    engine = create_engine(constants.DATA_NAME, echo=False)
     Base.metadata.create_all(engine)
     session = Session(engine)
     main(session)
